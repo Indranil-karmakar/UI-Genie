@@ -5,7 +5,6 @@ import multer from 'multer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import cloudinary from 'cloudinary';
 import mongoose from 'mongoose';
 import { v2 as cloudinary } from 'cloudinary';
 import GeneratedUI from '../models/GeneratedUISchema.js';
