@@ -146,11 +146,46 @@ When deploying to Render, you need to set the following environment variables in
 
 ### Troubleshooting 500 Errors
 
-If you get a 500 error on `/api/upload`, check that:
-- All environment variables are properly set in Render
-- MongoDB connection string is correct and accessible
-- Cloudinary credentials are valid
-- Gemini API key is valid and has sufficient quota
+If you get a 500 error on `/api/upload`, follow these steps:
+
+1. **Check the debug endpoint first:**
+   ```
+   GET https://your-app.onrender.com/api/upload/debug
+   ```
+   This will show you which environment variables are missing.
+
+2. **Check Render logs:**
+   - Go to your Render dashboard
+   - Click on your service
+   - Go to "Logs" tab
+   - Look for error messages with ❌ emoji
+
+3. **Common issues and solutions:**
+
+   **Missing Environment Variables:**
+   - Ensure all 6 environment variables are set in Render
+   - Double-check spelling and values
+   - Make sure there are no extra spaces
+
+   **MongoDB Connection Issues:**
+   - Verify your MongoDB URI is correct
+   - Ensure your MongoDB cluster allows connections from Render's IPs
+   - Check if your MongoDB cluster is active
+
+   **Cloudinary Issues:**
+   - Verify your Cloudinary credentials
+   - Check if your Cloudinary account is active
+   - Ensure you have sufficient upload quota
+
+   **Gemini API Issues:**
+   - Verify your Gemini API key is correct
+   - Check if you have sufficient API quota
+   - Ensure the API key has the correct permissions
+
+4. **Test each service individually:**
+   - Health check: `GET /api/health`
+   - Upload debug: `GET /api/upload/debug`
+   - Authentication: `POST /api/auth/login`
 
 ### Admin
 - `GET /api/admin/dashboard` - Get admin dashboard data
