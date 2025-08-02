@@ -1,5 +1,4 @@
-// const mongoose = require('mongoose');
-// const User = require('./models/UserSchema');
+
 import mongoose from 'mongoose';
 import User from './models/UserSchema.js';
 require('dotenv').config();

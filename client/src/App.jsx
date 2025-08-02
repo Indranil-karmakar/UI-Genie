@@ -52,7 +52,7 @@ function Dashboard({ user, onLogout }) {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5000/api/upload', {
+            const response = await fetch('https://ui-genie.onrender.com/api/upload', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`

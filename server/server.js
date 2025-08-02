@@ -1,16 +1,4 @@
-// const cors = require('cors');
-// require('dotenv').config();
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const uploadRoutes = require('./routes/uploadRoutes');
-// const downloadRoutes = require('./routes/downloadRoutes');
-// const authRoutes = require('./routes/authRoutes');
-// const adminRoutes = require('./routes/adminRoutes');
-// const hfService = require('./services/geminiService.js');
-// const GeneratedUI = require('./models/GeneratedUISchema');
-// const fs = require('fs');
-// const {generateReactCodeFromImage} = require('./services/geminiService.js');
-// const path = require('path');
+
 import dotenv from 'dotenv';
 dotenv.config();
 import cors from 'cors';
