@@ -99,6 +99,59 @@ A responsive React application with user authentication, admin dashboard, and im
 - `POST /api/auth/login` - Login user
 - `GET /api/auth/me` - Get current user
 
+## Deployment (Render)
+
+### Environment Variables Required
+
+When deploying to Render, you need to set the following environment variables in your Render dashboard:
+
+1. **MONGO_URI**: Your MongoDB connection string
+   ```
+   mongodb+srv://your-username:your-password@your-cluster.mongodb.net/your-database
+   ```
+
+2. **JWT_SECRET**: A secure random string for JWT token signing
+   ```
+   your-super-secret-jwt-key-change-this-in-production
+   ```
+
+3. **CLOUDINARY_NAME**: Your Cloudinary cloud name
+   ```
+   your-cloudinary-cloud-name
+   ```
+
+4. **CLOUDINARY_KEY**: Your Cloudinary API key
+   ```
+   your-cloudinary-api-key
+   ```
+
+5. **CLOUDINARY_SECRET**: Your Cloudinary API secret
+   ```
+   your-cloudinary-api-secret
+   ```
+
+6. **GEMINI_API_KEY**: Your Google Gemini API key
+   ```
+   your-gemini-api-key
+   ```
+
+### Render Deployment Steps
+
+1. Connect your GitHub repository to Render
+2. Create a new Web Service
+3. Set the build command: `npm run build`
+4. Set the start command: `npm start`
+5. Add all the environment variables listed above
+6. Deploy!
+
+### Troubleshooting 500 Errors
+
+If you get a 500 error on `/api/upload`, check that:
+- All environment variables are properly set in Render
+- MongoDB connection string is correct and accessible
+- Cloudinary credentials are valid
+- Gemini API key is valid and has sufficient quota
+
 ### Admin
 - `GET /api/admin/dashboard` - Get admin dashboard data
 - `GET /api/admin/users` - Get all users
