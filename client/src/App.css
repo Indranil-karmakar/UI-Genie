@@ -1,0 +1,458 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    /* Light gray background */
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #FF3E00, #FF8C00, #FFD700, #4CAF50, #2196F3, #9C27B0);
+    background-size: 400% 400%; /* Make the gradient larger for animation */
+    animation: gradientAnimation 4s ease infinite; /* Apply animation */
+}
+
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Other existing styles remain unchanged */
+
+
+
+
+
+
+h1,
+h2,
+h3 {
+    color: #1f2937;
+    /* Dark gray text */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    /* Padding for the main container */
+}
+
+/* General Styles */
+/* UI Genie - Animated Gradient Text */
+.ui-genie {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    background: linear-gradient(
+        90deg,
+        #FF3E00, 
+        #FF8C00,
+        #FFD700, 
+        #4CAF50,
+        #2196F3,
+        #9C27B0,
+        #FF3E00  /* Repeat first color for smooth loop */
+    );
+    background-size: 400% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: uiGenieGlow 5s linear infinite;
+    will-change: background-position;
+    display: inline-block; /* Needed for gradient text to work */
+    position: relative;
+    padding: 0.25em 0.5em;
+}
+
+@keyframes uiGenieGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    padding: 1.5rem;
+    /* Padding inside the card */
+}
+.grid .card h2 {
+    font-size: 1.5rem;
+    background: linear-gradient(
+        90deg,
+        #FF6B7B,
+        #FF8D39,
+        #FFBF00,
+        #2DCB62,
+        #2998FF,
+        #9B51E0
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: h2Gradient 5s ease infinite;
+    display: inline-block;
+    padding: 0.2rem 0;
+}
+
+@keyframes h2Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.file-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.file-input input[type="file"] {
+    display: none;
+    /* Hide the default file input */
+}
+
+.file-input label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e0f2fe;
+    /* Light blue background */
+    color: #1d4ed8;
+    /* Blue text */
+    border-radius: 0.375rem;
+    /* Rounded corners */
+    cursor: pointer;
+}
+
+.file-info {
+    background-color: #f3f4f6;
+    /* Light gray background */
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    /* Rounded corners */
+    margin-bottom: 1rem;
+}
+
+.button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    /* Rounded corners */
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.button.upload {
+    background-color: #3b82f6;
+    /* Blue background */
+    color: white;
+}
+
+.button.upload:disabled {
+    background-color: #d1d5db;
+    /* Gray background when disabled */
+    color: #6b7280;
+    /* Gray text */
+    cursor: not-allowed;
+}
+
+.button.download {
+    background-color: #22c55e;
+    /* Green background */
+    color: white;
+    margin-top: 1 rem;
+}
+
+.button.download:disabled {
+    background-color: #d1d5db;
+    /* Gray background when disabled */
+    color: #6b7280;
+    /* Gray text */
+    cursor: not-allowed;
+}
+
+.code-container {
+    background-color: #1f2937;
+    /* Dark gray background */
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.code-header {
+    background-color: #374151;
+    /* Darker gray background */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.code-header h3 {
+    color: white;
+}
+
+.code-header span {
+    color: #9ca3af;
+    /* Light gray text */
+}
+
+.code-content {
+    padding: 1rem;
+    height: 400px;
+    /* Fixed height for code area */
+    overflow: auto;
+    /* Scroll if content overflows */
+    color: #34d399;
+    /* Green text for code */
+    font-family: monospace;
+    /* Monospace font for code */
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.loading .spinner {
+    border: 4px solid transparent;
+    border-top: 4px solid #3b82f6;
+    /* Blue spinner */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    /* Spinner animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #9ca3af;
+    /* Light gray text */
+}
+
+.empty-state svg {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 1rem;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    padding: 1.5rem;
+    /* Padding inside the card */
+}
+
+.file-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.file-input input[type="file"] {
+    display: none;
+    /* Hide the default file input */
+}
+
+.file-input label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e0f2fe;
+    /* Light blue background */
+    color: #1d4ed8;
+    /* Blue text */
+    border-radius: 0.375rem;
+    /* Rounded corners */
+    cursor: pointer;
+}
+
+.file-info {
+    background-color: #f3f4f6;
+    /* Light gray background */
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    /* Rounded corners */
+    margin-bottom: 1rem;
+}
+
+.button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    /* Rounded corners */
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.button.upload {
+    background-color: #3b82f6;
+    /* Blue background */
+    color: white;
+}
+
+.button.upload:disabled {
+    background-color: #d1d5db;
+    /* Gray background when disabled */
+    color: #6b7280;
+    /* Gray text */
+    cursor: not-allowed;
+}
+
+.button.download {
+    background-color: #22c55e;
+    /* Green background */
+    color: white;
+    margin-top: 1 rem;
+}
+
+.button.download:disabled {
+    background-color: #d1d5db;
+    /* Gray background when disabled */
+    color: #6b7280;
+    /* Gray text */
+    cursor: not-allowed;
+}
+
+.code-container {
+    background-color: #1f2937;
+    /* Dark gray background */
+    border-radius: 0.5rem;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.code-header {
+    background-color: #374151;
+    /* Darker gray background */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.code-header h3 {
+    color: white;
+}
+
+.code-header span {
+    color: #9ca3af;
+    /* Light gray text */
+}
+
+.code-content {
+    padding: 1rem;
+    height: 400px;
+    /* Fixed height for code area */
+    overflow: auto;
+    /* Scroll if content overflows */
+    color: #34d399;
+    /* Green text for code */
+    font-family: monospace;
+    /* Monospace font for code */
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.loading .spinner {
+    border: 4px solid transparent;
+    border-top: 4px solid #3b82f6;
+    /* Blue spinner */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    /* Spinner animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #9ca3af;
+    /* Light gray text */
+}
+
+.empty-state svg {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 1rem;
+}
