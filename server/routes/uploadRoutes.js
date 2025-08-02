@@ -7,7 +7,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import cloudinary from 'cloudinary';
 import mongoose from 'mongoose';
-const cloudinaryV2 = cloudinary.v2;
+import { v2 as cloudinary } from 'cloudinary';
 import GeneratedUI from '../models/GeneratedUISchema.js';
 import { generateReactCodeFromImage } from '../services/geminiService.js';
 import { auth } from '../middleware/auth.js';
